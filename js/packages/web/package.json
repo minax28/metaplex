@@ -28,7 +28,7 @@
     "next": "^11.0.1",
     "next-compose-plugins": "^2.2.1",
     "next-with-less": "^1.0.0",
-    "react": "17.0.2",
+    "react": "^17.0.2",
     "react-chartjs-2": "^3.0.4",
     "react-content-loader": "^6.0.3",
     "react-dom": "17.0.2",
@@ -46,7 +46,7 @@
     "start:prod": "next start",
     "test": "jest",
     "deploy:ar": "yarn export && arweave deploy-dir  ../../build/web --key-file ",
-    "deploy:gh": "yarn export && gh-pages -d ../../build/web --repo https://github.com/minax28/minax28-metaplex -t true",
+    "deploy:gh": "yarn export && gh-pages -d ../../build/web --repo https://github.com/minax28/minax-metaplex -t true",
     "deploy": "yarn build && yarn deploy:gh",
     "format:fix": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\""
   },
