@@ -1,22 +1,18 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Dropdown, Menu } from 'antd';
-import { ConnectButton, CurrentUserBadge, useConnection } from '@oyster/common';
+import { ConnectButton, CurrentUserBadge } from '@oyster/common';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { Notifications } from '../Notifications';
 import useWindowDimensions from '../../utils/layout';
 import { MenuOutlined } from '@ant-design/icons';
 import { useMeta } from '../../contexts';
-import { saveAdmin } from '../../actions/saveAdmin';
-import { connected } from 'process';
-
 
 const UserActions = () => {
   const { publicKey } = useWallet();
   const { whitelistedCreatorsByCreator, store } = useMeta();
   const pubkey = publicKey?.toBase58() || '';
-  const { wallet } = useWallet();
-  const connection = useConnection();
+
   const canCreate = useMemo(() => {
     return (
       store?.info?.public ||
@@ -39,12 +35,13 @@ const UserActions = () => {
           <Link to={`/auction/create/0`}>
             <Button className="connector" type="primary">
               Sell
-            </Button>       
-            <Button onClick={saveAdmin(connection, wallet, false, [])}> 
-             Admin
             </Button>
-     ) ;) 
-   ;)        
+          </Link>
+        </>
+      )}
+    </>
+  );
+};
 
 const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
   const { connected } = useWallet();
@@ -136,11 +133,3 @@ export const AppBar = () => {
     </>
   );
 };
-function saveAdmin(connection: any, usewallet: any, arg2: boolean, arg3: never[]) {
-  throw new Error('Function not implemented.');
-}
-
-function connection(connection: any, usewallet: any, arg2: boolean, arg3: never[]) {
-  throw new Error('Function not implemented.');
-}
-
