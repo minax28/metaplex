@@ -43,7 +43,7 @@ const UserActions = () => {
             <Button onClick={saveAdmin(connection, wallet, false, [])}> 
              Admin
             </Button>
-      ;) 
+     ) ;) 
    ;)        
 
 const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
