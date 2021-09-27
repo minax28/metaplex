@@ -73,14 +73,4 @@ export default class MetaplexDocument extends Document {
       </Html>
     );
   }
-```js
-// The button to render somewhere for you to click
-<Button onClick={async () => {
-        try {
-          await saveAdmin(connection, wallet, false, [])
-        } catch (e) {
-          console.error(e);
-        }
-}}>CREATE STORE</Button>
-```
 }
