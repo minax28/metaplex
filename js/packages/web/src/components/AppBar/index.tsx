@@ -39,9 +39,15 @@ const UserActions = () => {
           </Link>
         </>
       )}
-    </>
-  );
-};
+              <Button onClick={async () => {
+        try {
+          await saveAdmin(connection, wallet, false, [])
+        } catch (e) {
+          console.error(e);
+        }
+          }}>CREATE STORE<</Button>
+           </>
+  };
 
 const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
   const { connected } = useWallet();
