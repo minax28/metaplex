@@ -137,6 +137,7 @@ export function useCollapseWrappedSol({
         if ((balance && balance.value.uiAmount) || 0 > 0) {
           setShowNotification(true);
         }
+      // eslint-disable-next-line no-empty
       } catch (e) {}
     }
     setTimeout(fn, 60000);
@@ -311,6 +312,7 @@ export function Notifications() {
   const upcomingAuctions = useAuctions(AuctionViewState.Upcoming);
   const connection = useConnection();
   const wallet = useWallet();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { accountByMint } = useUserAccounts();
 
   const notifications: NotificationCard[] = [];
