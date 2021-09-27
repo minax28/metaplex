@@ -7,7 +7,6 @@ import { Notifications } from '../Notifications';
 import useWindowDimensions from '../../utils/layout';
 import { MenuOutlined } from '@ant-design/icons';
 import { useMeta } from '../../contexts';
-import { saveAdmin } from '../../actions/saveAdmin';
 
 const UserActions = () => {
   const { publicKey } = useWallet();
@@ -38,9 +37,11 @@ const UserActions = () => {
               Sell
             </Button>
           </Link>
-        </>>
-  };
-  
+        </>
+      )}
+    </>
+  );
+};
 
 const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
   const { connected } = useWallet();
@@ -132,16 +133,3 @@ export const AppBar = () => {
     </>
   );
 };
-function wallet(connection: any, wallet: any, arg2: boolean, arg3: never[]) {
-  throw new Error('Function not implemented.');
-}
-
-function connection(connection: any, wallet: (connection: any, wallet: any, arg2: boolean, arg3: never[]) => void, arg2: boolean, arg3: never[]) {
-  throw new Error('Function not implemented.');
-}
-
-
-    function connection(connection: any, wallet: any, arg2: boolean, arg3: never[]) {
-      throw new Error('Function not implemented.');
-    }
-
