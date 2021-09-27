@@ -38,17 +38,8 @@ const UserActions = () => {
               Sell
             </Button>
           </Link>
-        </>
-      )}
-              <Button onClick={async () => {
-        try {
-          await saveAdmin(connection, wallet, false, [])
-        } catch (e) {
-          console.error(e);
-        }
-          }}>CREATE STORE<</Button>
-           </>
-  )};
+        </>>
+  };
   
 
 const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
@@ -148,4 +139,9 @@ function wallet(connection: any, wallet: any, arg2: boolean, arg3: never[]) {
 function connection(connection: any, wallet: (connection: any, wallet: any, arg2: boolean, arg3: never[]) => void, arg2: boolean, arg3: never[]) {
   throw new Error('Function not implemented.');
 }
+
+
+    function connection(connection: any, wallet: any, arg2: boolean, arg3: never[]) {
+      throw new Error('Function not implemented.');
+    }
 
